@@ -1,0 +1,1 @@
+export type TData = string | number;

@@ -1,0 +1,12 @@
+services:
+  market-api:
+    build:
+      context: .
+      dockerfile: server/Dockerfile
+    ports:
+      - "${MARKET_API_PORT:-8090}:8080"
+    environment:
+      ASSET_COUNT: 5000
+      BATCH_SIZE: 250
+      TICK_MS: 100
+      WARMUP_MS: 3000
